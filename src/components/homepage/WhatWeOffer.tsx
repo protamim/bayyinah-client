@@ -45,12 +45,12 @@ const WhatWeOffer = () => {
           <div aria-describedby="main-wrapper">
             <div
               aria-describedby="top-content-wrapper"
-              className="flex items-center justify-center flex-col gap-y-6 mx-auto max-w-max mb-16"
+              className="flex items-center justify-center flex-col gap-y-6 mx-auto max-w-max mb-10 sm:mb-16"
             >
-              <h6 className="bg-sky-blue-300 py-2.5 uppercase px-5 rounded-full flex items-center justify-center max-w-max border border-sky-blue-400 text-neutral-900 text-sm sm:text-base font-medium">
+              <h6 className="bg-sky-blue-300 py-2.5 text-center uppercase px-5 rounded-full flex items-center justify-center max-w-max border border-sky-blue-400 text-neutral-900 text-sm sm:text-base font-medium">
                 DISCOVER YOUR PERFECT PROGRAME FROM OUR COURSES
               </h6>
-              <h3 className="text-5xl text-neutral-800 font-bold text-center">
+              <h3 className="text-3xl sm:text-5xl text-neutral-800 font-bold text-center">
                 WHAT WE OFFER
               </h3>
             </div>
@@ -78,7 +78,7 @@ const WhatWeOffer = () => {
                     />
                   </div>
 
-                  <h4 className="text-3xl font-medium text-neutral-900 text-center px-4 pb-6">
+                  <h4 className="text-2xl sm:text-3xl font-medium text-neutral-900 text-center px-4 pb-6">
                     {offer.label}
                   </h4>
                 </div>

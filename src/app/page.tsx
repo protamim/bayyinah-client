@@ -1,4 +1,4 @@
-import { HomeHero, WhatWeOffer } from "@/components/homepage";
+import { HomeHero, WhatWeOffer, WhyChooseUs } from "@/components/homepage";
 import React from "react";
 
 const HomePage = () => {
@@ -7,6 +7,7 @@ const HomePage = () => {
       <div aria-describedby="home-page">
         <HomeHero />
         <WhatWeOffer />
+        <WhyChooseUs />
       </div>
     </React.Fragment>
   );

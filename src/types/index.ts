@@ -7,7 +7,6 @@ export interface HeaderNavItemTypes extends NavItemTypes {
   subItems?: NavItemTypes[];
 }
 
-
 export interface ImageTypes {
   url: string;
   width: number;
@@ -19,4 +18,10 @@ export interface OfferCardTypes {
   key: string;
   label: string;
   image: ImageTypes;
+}
+
+export interface WhyChooseListDataTypes {
+  title: string;
+  image: ImageTypes;
+  shortDescription: string;
 }
