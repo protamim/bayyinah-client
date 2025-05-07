@@ -1,4 +1,4 @@
-import { HomeHero, WhatWeOffer, WhyChooseUs } from "@/components/homepage";
+import { FaqSection, FeedbackFromStudents, HomeArticles, HomeHero, InteractiveLearning, WhatWeOffer, WhyChooseUs } from "@/components/homepage";
 import React from "react";
 
 const HomePage = () => {
@@ -8,6 +8,10 @@ const HomePage = () => {
         <HomeHero />
         <WhatWeOffer />
         <WhyChooseUs />
+        <InteractiveLearning />
+        <FeedbackFromStudents />
+        <HomeArticles />
+        <FaqSection />
       </div>
     </React.Fragment>
   );
