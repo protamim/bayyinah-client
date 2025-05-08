@@ -37,40 +37,40 @@ const FAQ_DATA = [
   {
     question: "What topics or skills will my child learn?",
     answer:
-      "Children will learn [basic coding/math/art/reading/language/science/etc.], along with essential skills like problem-solving, creativity, and collaboration.",
+      "Children will learn Arabic, along with essential skills like problem-solving, creativity, and collaboration.",
   },
 ];
 
 const FaqSection = () => {
   return (
     <React.Fragment>
-      <section aria-describedby="faq-section" className="py-16 bg-neutral-100">
+      <section aria-describedby="faq-section" className="py-10 sm:py-16 bg-neutral-100">
         <div className="container">
           <div aria-describedby="main-wrapper">
             <div
               aria-describedby="top-content"
-              className="flex items-center justify-center flex-col gap-y-8 max-w-4xl mx-auto mb-24"
+              className="flex items-center justify-center flex-col gap-y-8 max-w-4xl mx-auto mb-14 sm:mb-24"
             >
               <h6 className="px-5 text-base font-medium text-neutral-800 text-center py-2.5 bg-[#CFE9FA] flex items-center justify-center rounded-full w-max border border-[#C1DDEF]">
                 FAQ
               </h6>
-              <h3 className="text-5xl font-bold text-neutral-800 text-center leading-tight">
+              <h3 className="text-3xl sm:text-5xl font-bold text-neutral-800 text-center leading-snug">
                 Got Questions? We've Got Answers
               </h3>
             </div>
 
-            <div aria-describedby="faq-wrapper" className="mb-20">
+            <div aria-describedby="faq-wrapper" className="mb-10 sm:mb-20">
               <Accordion type="single" collapsible className="space-y-4">
                 {FAQ_DATA.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`${index}`}
-                    className="p-8 bg-gradient-to-r from-0% from-[#F8F8F8] to-100% to-[#F8F8F8] rounded-3xl border border-[#F7F7F6]"
+                    className="p-4 sm:p-8 bg-gradient-to-r from-0% from-[#F8F8F8] to-100% to-[#F8F8F8] last:border rounded-3xl border border-[#F7F7F6] transition-all ease-in-out duration-300 data-[state=open]:border-regal-blue-500"
                   >
-                    <AccordionTrigger className="text-2xl p-0 font-bold text-neutral-900 hover:no-underline [&>svg]:w-7 [&>svg]:h-7">
+                    <AccordionTrigger className="text-lg sm:text-2xl p-0 font-bold text-neutral-900 hover:no-underline [&>svg]:w-7 [&>svg]:h-7">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-lg font-normal text-neutral-700 pb-0 mt-7">
+                    <AccordionContent className="text-base sm:text-lg font-normal text-neutral-700 pb-0 mt-7">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>

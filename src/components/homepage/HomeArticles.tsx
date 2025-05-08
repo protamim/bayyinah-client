@@ -69,7 +69,7 @@ const LATEST_BLOGS = [
 const HomeArticles = () => {
   return (
     <React.Fragment>
-      <section aria-describedby="home-articles-section" className="pt-20 pb-24">
+      <section aria-describedby="home-articles-section" className="pt-20 pb-10 sm:pb-24">
         <div className="container">
           <div aria-describedby="main-wrapper">
             <div
@@ -80,24 +80,24 @@ const HomeArticles = () => {
                 ARTICLES AND BLOGS
               </h6>
 
-              <h3 className="text-5xl font-bold text-neutral-900 text-center leading-snug">
+              <h3 className="text-3xl sm:text-5xl font-bold text-neutral-900 text-center leading-snug">
                 GREAT RESOURCES FOR LEARNING ABOUT NEW ISLAMIC TOPIC
               </h3>
             </div>
 
             <div
               aria-describedby="blog-card-wrapper"
-              className="grid grid-cols-2 gap-10"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10"
             >
               {LATEST_BLOGS.map((blog, index) => (
                 <div
                   key={index}
                   aria-describedby="blog-card"
-                  className="flex items-center gap-x-8 gap-y-7"
+                  className="flex items-start sm:items-center gap-x-8 gap-y-7 flex-col sm:flex-row "
                 >
                   <div
                     aria-describedby="blog-feature-image"
-                    className="max-w-3xs flex grow-0 shrink-0 basis-auto"
+                    className="sm:max-w-3xs flex grow-0 shrink-0 basis-auto"
                   >
                     <Image
                       src={blog.featureImage.url}

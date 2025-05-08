@@ -24,27 +24,27 @@ const InteractiveLearning = () => {
     <React.Fragment>
       <section
         aria-describedby="interactive-learning-section"
-        className="pt-20 bg-regal-blue-500"
+        className="pt-10 sm:pt-20 bg-regal-blue-500"
       >
         <div className="container">
           <div aria-describedby="main-wrapper">
             <div
               aria-describedby="top-content"
-              className="flex items-center justify-center flex-col gap-y-8 mb-20"
+              className="flex items-center justify-center flex-col gap-y-8 mb-10 sm:mb-20"
             >
               <h6 className="flex items-center justify-center py-2.5 px-5 rounded-full bg-[#155699] border border-[#1E63AA] text-base font-medium text-white text-center w-max">
                 Progress
               </h6>
-              <h3 className="text-5xl text-white font-bold text-center">
+              <h3 className="text-3xl leading-tight sm:text-5xl text-white font-bold text-center">
                 LET'S STEP INTO INTERACTIVE LEARNING
               </h3>
             </div>
 
             <div
               aria-describedby="section-content-wrapper"
-              className="flex items-end justify-between gap-x-14 gap-y-8"
+              className="flex xl:items-end items-center justify-between gap-x-14 gap-y-8 flex-col lg:flex-row"
             >
-              <div aria-describedby="left-column" className="pb-16">
+              <div aria-describedby="left-column" className="pb-10 sm:pb-16 order-2 lg:order-1">
                 <div
                   aria-describedby="content-box-wrapper"
                   className="space-y-8"
@@ -54,10 +54,10 @@ const InteractiveLearning = () => {
                       key={index}
                       aria-describedby="content-box"
                       className={cn(
-                        "bg-white py-6 px-5 flex items-center gap-x-2 rounded-xl rounded-tr-4xl max-w-[29.68rem]",
-                        index === 0 && "ml-36",
-                        index === 1 && "ml-14 max-w-[32rem]",
-                        index === 2 && 'max-w-[31rem]'
+                        "bg-white sm:py-6 py-3 sm:px-5 px-3 flex items-center gap-x-2 rounded-xl rounded-tr-4xl max-w-[29.68rem]",
+                        index === 0 && "sm:ml-36",
+                        index === 1 && "sm:ml-14 sm:max-w-[32rem]",
+                        index === 2 && 'sm:max-w-[31rem]'
                       )}
                     >
                       <div aria-describedby="count-column">
@@ -69,10 +69,10 @@ const InteractiveLearning = () => {
                         aria-describedby="content-column"
                         className="flex items-start flex-col gap-y-1"
                       >
-                        <h4 className="text-2xl font-semibold text-neutral-900">
+                        <h4 className="text-xl sm:text-2xl font-semibold text-neutral-900">
                           {step.title}
                         </h4>
-                        <p className="text-lg font-medium text-neutral-500">
+                        <p className="text-base sm:text-lg font-medium text-neutral-500">
                           {step.shortDescription}
                         </p>
                       </div>
@@ -80,7 +80,8 @@ const InteractiveLearning = () => {
                   ))}
                 </div>
               </div>
-              <div aria-describedby="right-column">
+
+              <div aria-describedby="right-column" className="order-1 lg:order-2">
                 <div
                   aria-describedby="image-wrapper"
                   className="max-w-[31.25rem] flex items-center"

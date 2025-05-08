@@ -5,3 +5,5 @@ export {default as InteractiveLearning} from './InteractiveLearning';
 export {default as FeedbackFromStudents} from './FeedbackFromStudents';
 export {default as HomeArticles} from './HomeArticles'
 export {default as FaqSection} from './FaqSection';
+export {default as SubscribeNewsletter} from './SubscribeNewsletter'
+export {} from './JoiningGuide'

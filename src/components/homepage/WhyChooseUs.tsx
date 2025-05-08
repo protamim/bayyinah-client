@@ -78,7 +78,7 @@ const WhyChooseUs = () => {
     <React.Fragment>
       <section
         aria-describedby="why-choose-us-section"
-        className="py-16 bg-white"
+        className="py-10 sm:py-16 bg-white"
       >
         <div className="container">
           <div aria-describedby="main-wrapper">

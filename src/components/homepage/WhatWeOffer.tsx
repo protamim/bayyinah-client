@@ -39,7 +39,7 @@ const WhatWeOffer = () => {
     <React.Fragment>
       <section
         aria-describedby="what-we-offer-section"
-        className="bg-neutral-100 py-20"
+        className="bg-neutral-100 py-10 sm:py-20"
       >
         <div className="container">
           <div aria-describedby="main-wrapper">
