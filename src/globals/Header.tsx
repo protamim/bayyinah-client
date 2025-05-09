@@ -55,7 +55,7 @@ const MainHeader = () => {
             </Link>
           </div>
 
-          <div aria-describedby="header-nav-lists" className="h-full flex-1 flex items-center justify-end">
+          <div aria-describedby="header-nav-lists" className="h-full flex-1 items-center justify-end hidden lg:flex">
             <ul className="flex items-center gap-12 h-full">
               {HEADER_NAV_ITEMS.map((nav) => (
                 <React.Fragment key={nav.label}>
