@@ -20,23 +20,25 @@ const HomeHero = () => {
           <div aria-describedby="main-wrapper">
             <div
               aria-describedby="content-wrapper"
-              className="flex items-center gap-x-7 gap-y-5"
+              className="flex items-center gap-x-7 gap-y-14 relative z-[3] flex-col lg:flex-row"
             >
               <div aria-describedby="left-column" className="basis-1/2">
-                <h6 className="bg-sky-blue-300 py-2.5 px-5 rounded-full flex items-center justify-center max-w-max border border-sky-blue-400 text-neutral-900 text-base font-medium mb-8">
+                <h6 className="bg-sky-blue-300 py-2.5 px-5 rounded-full flex items-center justify-center max-w-max border border-sky-blue-400 text-neutral-900 text-sm sm:text-base font-medium mb-8">
                   Master Quran and Arabic, Step by Step
                 </h6>
-                <h1 className="text-7xl font-bold text-regal-blue-500 mb-7">
+
+                <h1 className="text-5xl md:text-7xl font-bold text-regal-blue-500 mb-7">
                   Arabic Quran Mastery
                 </h1>
-                <p className="text-2xl font-normal text-regal-blue-400 mb-12">
+
+                <p className="text-xl sm:text-2xl font-normal text-regal-blue-400 mb-12">
                   Begin your journey with expert tutors and customized courses
                   for every learner.
                 </p>
 
                 <div
                   aria-describedby="btn-wrapper"
-                  className="max-w-max flex items-center gap-x-3"
+                  className="max-w-max flex items-center gap-x-3 flex-wrap gap-y-5"
                 >
                   <Button className="rounded-full" asChild>
                     <Link href={"#"}>Find Course</Link>
