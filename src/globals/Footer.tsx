@@ -154,7 +154,7 @@ export const FooterNavigation = () => {
   return (
     <React.Fragment>
       {FOOTER_NAV_ITEMS.map((nav) => (
-        <ul aria-describedby="nav-column" className="flex flex-col gap-y-4">
+        <ul aria-describedby="nav-column" className="flex flex-col gap-y-4" key={nav.key}>
           <h4
             aria-describedby="nav-title"
             className="text-xl font-bold text-neutral-800 uppercase"
