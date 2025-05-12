@@ -121,11 +121,11 @@ export const FooterNavigation = () => {
       lists: [
         {
           label: "About us",
-          url: "#",
+          url: "/about-us",
         },
         {
           label: "Blog",
-          url: "#",
+          url: "/blogs",
         },
         {
           label: "Our Teachers",
@@ -141,7 +141,7 @@ export const FooterNavigation = () => {
         },
         {
           label: "Career",
-          url: "#",
+          url: "/career",
         },
         {
           label: "Sitemap",
