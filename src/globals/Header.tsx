@@ -9,29 +9,29 @@ import { Sub } from "@radix-ui/react-navigation-menu";
 const HEADER_NAV_ITEMS: HeaderNavItemTypes[] = [
   {
     label: "Courses",
-    url: "/courses",
+    url: "#",
   },
   {
     label: "Price",
-    url: "/price",
+    url: "/pricing",
   },
   {
     label: "Resources",
     subItems: [
-      { label: "Blog", url: "/blog" },
-      { label: "Podcast", url: "/podcast" },
-      { label: "Videos", url: "/videos" },
-      { label: "Books", url: "/books" },
-      { label: "Articles", url: "/articles" },
-      { label: "Quran", url: "/quran" },
-      { label: "Tafseer", url: "/tafseer" },
-      { label: "Quranic Arabic", url: "/quranic-arabic" },
-      { label: "Arabic", url: "/arabic" },
+      { label: "Blog", url: "/blogs" },
+      { label: "Podcast", url: "#" },
+      { label: "Videos", url: "#" },
+      { label: "Books", url: "#" },
+      { label: "Articles", url: "#" },
+      { label: "Quran", url: "#" },
+      { label: "Tafseer", url: "#" },
+      { label: "Quranic Arabic", url: "#" },
+      { label: "Arabic", url: "#" },
     ],
   },
   {
     label: "Cart",
-    url: "/cart",
+    url: "#",
   },
 ];
 
@@ -71,7 +71,7 @@ const MainHeader = () => {
                         </span>
 
                         {/* sub menu */}
-                        <ul className="absolute top-full z-50 right-0 shadow-sm p-2 bg-white border border-gray-300 invisible opacity-0 group-hover/nav-item:h-auto group-hover/nav-item:w-max group-hover/nav-item:visible group-hover/nav-item:opacity-100 transition-all ease-in-out duration-300 group-hover/nav-item:-translate-y-5">
+                        <ul className="absolute top-full z-50 right-0 shadow-sm p-2 space-y-2 bg-white border border-gray-300 invisible opacity-0 group-hover/nav-item:h-auto group-hover/nav-item:w-max group-hover/nav-item:visible group-hover/nav-item:opacity-100 transition-all ease-in-out duration-300 group-hover/nav-item:-translate-y-5">
                           {nav.subItems.map((subItem) => (
                             <li key={subItem.label}>
                               <Link href={subItem.url || "#"}>
@@ -84,7 +84,7 @@ const MainHeader = () => {
                     </React.Fragment>
                   ) : (
                     <li className="flex items-center h-full">
-                      <Link href={"#"} className="text-xl h-full font-medium text-neutral-900 flex items-center justify-center">{nav.label}</Link>
+                      <Link href={nav.url || '#'} className="text-xl h-full font-medium text-neutral-900 flex items-center justify-center">{nav.label}</Link>
                     </li>
                   )}
                 </React.Fragment>
