@@ -59,9 +59,7 @@ const AboutUsPage = () => {
               <div aria-describedby="box-wrapper" className="space-y-5">
                 <div
                   aria-describedby="content-box"
-                  className="flex items-center  gap-y-12 bg-white p-5 sm:p-10 rounded-2xl flex-col
-                md:flex-row lg:gap-x-16 md:gap-x-8
-                "
+                  className="flex items-center  gap-y-12 bg-white p-5 sm:p-10 rounded-2xl flex-col md:flex-row lg:gap-x-16 md:gap-x-8"
                 >
                   <div
                     aria-describedby="left-column"
