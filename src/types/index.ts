@@ -42,3 +42,15 @@ export interface FaqTypes {
   question: string;
   answer: string;
 }
+
+export interface ActionTypes {
+  url: string;
+  label: string;
+}
+export interface CourseCardTypes {
+  image: ImageTypes;
+  subTitle: string;
+  title: string;
+  shortDescription: string;
+  action: ActionTypes;
+}
