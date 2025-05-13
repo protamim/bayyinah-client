@@ -26,22 +26,6 @@ export interface WhyChooseListDataTypes {
   shortDescription: string;
 }
 
-//  {
-//     featureImage: {
-//       url: "/blog-feature-1.png",
-//       width: 3996,
-//       height: 2838,
-//       alt: "blog feature image",
-//     },
-//     publishAt: "Oct 24, 2023",
-//     title: " Ramadan: A Month of Reflection and Renewal",
-//     shortDescription: "Ramadan, the ninth month of the Islamic",
-//     action: {
-//       url: "#",
-//       label: "Read More",
-//     },
-//   },
-
 export interface BlogCardActionTypes {
   url: string;
   label: string;
@@ -52,4 +36,9 @@ export interface BlogCardTypes {
   title: string;
   shortDescription: string;
   action: BlogCardActionTypes;
+}
+
+export interface FaqTypes {
+  question: string;
+  answer: string;
 }
