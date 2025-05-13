@@ -15,7 +15,7 @@ const LATEST_BLOGS = [
     title: " Ramadan: A Month of Reflection and Renewal",
     shortDescription: "Ramadan, the ninth month of the Islamic",
     action: {
-      url: "#",
+      url: "/blogs/1",
       label: "Read More",
     },
   },
@@ -30,7 +30,7 @@ const LATEST_BLOGS = [
     title: "Sha‘ban: A Month of Preparation and Spiritual",
     shortDescription: "Sha‘ban, the eighth month of the Islamic",
     action: {
-      url: "#",
+      url: "/blogs/2",
       label: "Read More",
     },
   },
@@ -45,7 +45,7 @@ const LATEST_BLOGS = [
     title: "Rajab: A Month of Divine Mercy and Awakening",
     shortDescription: "Rajab, the seventh month of the Islamic",
     action: {
-      url: "#",
+      url: "/blogs/3",
       label: "Read More",
     },
   },
@@ -60,7 +60,7 @@ const LATEST_BLOGS = [
     title: "Shawwal: A Month of Gratitude and Continuity",
     shortDescription: "Shawwal, the tenth month of the Islamic",
     action: {
-      url: "#",
+      url: "/blogs/4",
       label: "Read More",
     },
   },
