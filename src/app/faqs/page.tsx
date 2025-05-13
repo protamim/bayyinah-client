@@ -89,7 +89,7 @@ const FaqPage = () => {
               </div>
 
               <div aria-describedby="faq-tab">
-                <Tabs>
+                <Tabs defaultValue={FAQ_TAB_LISTS[0].value}>
                   <TabsList className="mx-auto">
                     {FAQ_TAB_LISTS.map((tab) => (
                       <TabsTrigger
@@ -124,7 +124,9 @@ const FaqPage = () => {
                 className="py-9 px-6 bg-regal-blue-500 rounded-2xl flex flex-col items-center justify-center"
               >
                 <div aria-describedby="title" className="mb-10 sm:mb-12">
-                  <h3 className="text-4xl sm:text-5xl text-white font-bold text-center">Any other Question?</h3>
+                  <h3 className="text-4xl sm:text-5xl text-white font-bold text-center">
+                    Any other Question?
+                  </h3>
                 </div>
 
                 <div
