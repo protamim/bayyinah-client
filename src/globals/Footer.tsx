@@ -137,7 +137,7 @@ export const FooterNavigation = () => {
         },
         {
           label: "FAQ",
-          url: "#",
+          url: "/faqs",
         },
         {
           label: "Career",

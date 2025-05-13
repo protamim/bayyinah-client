@@ -4,12 +4,11 @@ import React from "react";
 
 import { HeaderNavItemTypes } from "@/types";
 import { ChevronDown } from "lucide-react";
-import { Sub } from "@radix-ui/react-navigation-menu";
 
 const HEADER_NAV_ITEMS: HeaderNavItemTypes[] = [
   {
     label: "Courses",
-    url: "#",
+    url: "/courses",
   },
   {
     label: "Price",
