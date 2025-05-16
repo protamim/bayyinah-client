@@ -52,7 +52,7 @@ const JoiningGuide = () => {
                   </p>
 
                   <Button asChild className="text-base sm:text-xl">
-                    <Link href={'#'}>Join Now</Link>
+                    <Link href={'courses/1'}>Join Now</Link>
                   </Button>
                 </div>
               </div>

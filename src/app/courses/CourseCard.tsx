@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CourseCardTypes } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface CourseCardProps {
@@ -9,8 +10,6 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ cardData }) => {
-  //   const [{ image, action, shortDescription, subTitle, title }] = cardData;
-
   return (
     <React.Fragment>
       {cardData.map((course, index) => (
@@ -62,7 +61,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ cardData }) => {
               {course.shortDescription}
             </p>
 
-            <Button>{course.action.label}</Button>
+            <Button asChild>
+              <Link href={course.action.url}>{course.action.label}</Link>
+            </Button>
           </div>
         </div>
       ))}
