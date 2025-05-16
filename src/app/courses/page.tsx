@@ -40,7 +40,7 @@ const COURSES_DATA: CourseCardTypes[] = [
       "Quran Reading Quran Reading Quran Reading Quran Reading Quran Reading",
     action: {
       label: "Enroll Today",
-      url: "#",
+      url: "courses/1",
     },
   },
   {
@@ -56,7 +56,7 @@ const COURSES_DATA: CourseCardTypes[] = [
       "Quran Reading Quran Reading Quran Reading Quran Reading Quran Reading",
     action: {
       label: "Enroll Today",
-      url: "#",
+      url: "courses/2",
     },
   },
   {
@@ -72,7 +72,7 @@ const COURSES_DATA: CourseCardTypes[] = [
       "Quran Reading Quran Reading Quran Reading Quran Reading Quran Reading",
     action: {
       label: "Enroll Today",
-      url: "#",
+      url: "courses/3",
     },
   },
   {
@@ -88,7 +88,7 @@ const COURSES_DATA: CourseCardTypes[] = [
       "Quran Reading Quran Reading Quran Reading Quran Reading Quran Reading",
     action: {
       label: "Enroll Today",
-      url: "#",
+      url: "courses/4",
     },
   },
   {
@@ -104,7 +104,7 @@ const COURSES_DATA: CourseCardTypes[] = [
       "Quran Reading Quran Reading Quran Reading Quran Reading Quran Reading",
     action: {
       label: "Enroll Today",
-      url: "#",
+      url: "courses/5",
     },
   },
 ];

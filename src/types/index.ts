@@ -54,3 +54,47 @@ export interface CourseCardTypes {
   shortDescription: string;
   action: ActionTypes;
 }
+
+export interface CourseFeatureItemTypes {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  label: string;
+}
+
+export interface CourseFeaturesTypes  {
+  title: string;
+  key: string;
+  features: CourseFeatureItemTypes[]
+}
+
+export interface CourseDescriptionTypes {
+  title: string;
+  content: string;
+}
+
+export interface CourseContentMeta {
+  totalDuration: string;
+  totalLectures: string;
+}
+export interface CourseContentLecturesItem {
+  label: string;
+  duration: string;
+  type: string;
+}
+export interface CourseContentLectures {
+  key: string;
+  title: string;
+  items: CourseContentLecturesItem[];
+  meta: CourseContentMeta;
+}
+export interface CourseContentDataTypes {
+  title: string;
+  key: string;
+  lectures: CourseContentLectures[];
+}
+
+export interface CourseHighlighDataTypes {
+  key: string;
+  label: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>,
+  value: string;
+}
