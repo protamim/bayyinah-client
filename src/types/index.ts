@@ -91,3 +91,10 @@ export interface CourseContentDataTypes {
   key: string;
   lectures: CourseContentLectures[];
 }
+
+export interface CourseHighlighDataTypes {
+  key: string;
+  label: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>,
+  value: string;
+}

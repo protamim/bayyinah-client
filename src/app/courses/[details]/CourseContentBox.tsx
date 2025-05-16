@@ -15,15 +15,15 @@ interface CourseContentBoxProps {
 }
 
 const CourseContentBox: React.FC<CourseContentBoxProps> = ({ data }) => {
-  const { key, lectures, title } = data;
+  const { lectures, title } = data;
 
   return (
     <React.Fragment>
       <div
         aria-describedby="course-content-box"
-        className="p-8 bg-white rounded-2xl border border-[#ECECEC]"
+        className="p-6 sm:p-8 bg-white rounded-2xl border border-[#ECECEC]"
       >
-        <h3 className="text-2xl font-medium text-neutral-900 pb-4 border-b border-neutral-200 mb-6">
+        <h3 className="text-xl sm:text-2xl font-medium text-neutral-900 pb-4 border-b border-neutral-200 mb-6">
           {title}
         </h3>
 
@@ -33,14 +33,14 @@ const CourseContentBox: React.FC<CourseContentBoxProps> = ({ data }) => {
               <AccordionItem
                 key={lecture.key}
                 value={lecture.key}
-                className="data-[state=open]:bg-neutral-100 px-5 rounded-md border-0 relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[1px] before:bg-neutral-200 last:before:hidden"
+                className="data-[state=open]:bg-neutral-100 px-2 sm:px-5 rounded-md border-0 relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[1px] before:bg-neutral-200 last:before:hidden"
               >
                 <AccordionTrigger className="flex-row-reverse hover:no-underline [&>svg]:w-6 [&>svg]:h-6 py-5 border-b border-b-neutral-200 rounded-none last:border-b-0 data-[state=open]:border-b">
                   <div
                     aria-describedby="lecture-title"
-                    className="flex items-center gap-5 justify-between flex-1"
+                    className="flex items-center gap-3 sm:gap-5 justify-between flex-1"
                   >
-                    <p className="text-xl font-medium text-neutral-800">
+                    <p className="text-base sm:text-xl font-medium text-neutral-800">
                       {lecture.title}
                     </p>
 
@@ -50,17 +50,17 @@ const CourseContentBox: React.FC<CourseContentBoxProps> = ({ data }) => {
                     >
                       <span
                         aria-describedby="lecture-count"
-                        className="text-base font-normal text-neutral-500"
+                        className="text-sm sm:text-base font-normal text-neutral-500"
                       >
                         {lecture.meta.totalLectures}
                       </span>
                       <span
                         aria-describedby="dot"
-                        className="w-1 h-1 bg-neutral-500 rounded-full"
+                        className="w-1 h-1 bg-neutral-500 rounded-full shrink-0 grow-0 basis-auto"
                       />
                       <span
                         aria-describedby="total-duration"
-                        className="text-base font-normal text-neutral-500"
+                        className="text-sm sm:text-base font-normal text-neutral-500"
                       >
                         {lecture.meta.totalDuration}
                       </span>
@@ -119,7 +119,7 @@ const CourseContentBox: React.FC<CourseContentBoxProps> = ({ data }) => {
           </Accordion>
         </div>
 
-        <Button variant={"outline"}>See More</Button>
+        <Button variant={"outline"} className="text-base sm:text-xl">See More</Button>
       </div>
     </React.Fragment>
   );

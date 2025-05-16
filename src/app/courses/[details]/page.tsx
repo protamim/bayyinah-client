@@ -1,5 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { BadgeCheck, Star } from "lucide-react";
+import {
+  BadgeCheck,
+  BookAudio,
+  CalendarClock,
+  CalendarFold,
+  ChartNoAxesCombined,
+  CircleCheck,
+  CirclePlay,
+  Clock,
+  FileText,
+  Languages,
+  Star,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -7,10 +20,17 @@ import {
   CourseContentDataTypes,
   CourseDescriptionTypes,
   CourseFeaturesTypes,
+  CourseHighlighDataTypes,
 } from "@/types";
 import CourseFeatureBox from "./CourseFeatureBox";
 import CourseDescription from "./CourseDescription";
 import CourseContentBox from "./CourseContentBox";
+import CoursePriceCard from "./CoursePriceCard";
+import CourseIncludesBox from "./CourseIncludesBox";
+import CourseHighlightBox from "./CourseHighlightBox";
+import CourseDetailsHero from "./CourseDetailsHero";
+import GetTrialClass from "./GetTrialClass";
+import { FaqSection } from "@/components/homepage";
 
 const COURSE_FEATURES: CourseFeaturesTypes[] = [
   {
@@ -150,7 +170,7 @@ const COURSE_CONTENT_DATA: CourseContentDataTypes = {
         { label: "Hieriki design", duration: "2 min", type: "video" },
         { label: "Basic Visual design", duration: "6 min", type: "video" },
         { label: "Ayatul Qursi", duration: "4 min", type: "video" },
-         { label: "Sura Aklash", duration: "1 min", type: "video" },
+        { label: "Sura Aklash", duration: "1 min", type: "video" },
       ],
       meta: {
         totalDuration: "120 min",
@@ -160,107 +180,79 @@ const COURSE_CONTENT_DATA: CourseContentDataTypes = {
   ],
 };
 
+const COURSE_INCLUDES = [
+  {
+    key: "this-course-includes",
+    title: "This course includes",
+    features: [
+      {
+        icon: CirclePlay,
+        label: "4hrs 20min",
+      },
+      {
+        icon: CalendarFold,
+        label: "100 Enrolled",
+      },
+      {
+        icon: BookAudio,
+        label: "50 Lectures",
+      },
+      {
+        icon: FileText,
+        label: "Skill Level Basic",
+      },
+      {
+        icon: Languages,
+        label: "English Language",
+      },
+    ],
+  },
+];
+
+const COURSE_HIGHLIGHT_DATA: CourseHighlighDataTypes[] = [
+  {
+    key: "last-update",
+    label: "Last update",
+    icon: Star,
+    value: "8/2024",
+  },
+  {
+    key: "level",
+    label: "Level",
+    icon: ChartNoAxesCombined,
+    value: "Beginner",
+  },
+  {
+    key: "enrolled-count",
+    label: "Students",
+    icon: Users,
+    value: "616,029 Enrolled",
+  },
+  {
+    key: "lecture-total-duration",
+    label: "Class Duration",
+    icon: Clock,
+    value: "30-40min",
+  },
+  {
+    key: "course-duration",
+    label: "Course Duration",
+    icon: CalendarClock,
+    value: "4-6 Months (50 Classes)",
+  },
+];
+
 const CourseDetails = () => {
   return (
     <React.Fragment>
       <div aria-describedby="course-details-page">
         <section
           aria-describedby="single-course-hero"
-          className="py-20 bg-regal-blue-500"
+          className="py-12 sm:py-20 bg-regal-blue-500"
         >
           <div className="container">
             <div aria-describedby="main-wrapper">
-              <div aria-describedby="top-content" className="max-w-3xl">
-                <div aria-describedby="course-detail" className="mb-10">
-                  <h1 className="text-5xl font-bold text-white mb-5">
-                    Mastery in Quran Reading
-                  </h1>
-                  <p className="text-xl font-normal text-white mb-8">
-                    This course takes students from beginner to advanced Quranic
-                    reading, focusing on pronunciation, Tajweed, and fluency. By
-                    the end, you'll read the Quran confidently, accurately, and
-                    beautifully.
-                  </p>
-
-                  <Button variant={"secondary"}>Get Started</Button>
-                </div>
-
-                <div
-                  aria-describedby="course-meta"
-                  className="flex items-center gap-x-3"
-                >
-                  <div
-                    aria-describedby="ratings"
-                    className="flex items-center gap-2"
-                  >
-                    <span
-                      aria-describedby="points"
-                      className="text-base font-semibold text-white"
-                    >
-                      4.8
-                    </span>
-                    <span
-                      aria-describedby="stars"
-                      className="flex items-center gap-1"
-                    >
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <Star
-                          key={index}
-                          className="w-4 h-4 fill-yellow-500 text-yellow-500"
-                        />
-                      ))}
-                    </span>
-                    <span
-                      aria-describedby="total-count"
-                      className="text-base font-medium text-white"
-                    >
-                      (254,487 Ratings)
-                    </span>
-                  </div>
-
-                  <div aria-describedby="total-student">
-                    <p className="text-base font-bold text-white">
-                      616,029 Students
-                    </p>
-                  </div>
-
-                  <div
-                    aria-describedby="author"
-                    className="flex items-center gap-3"
-                  >
-                    <div
-                      aria-describedby="image-wrapper"
-                      className="w-10 flex shrink-0 grow-0 basis-auto"
-                    >
-                      <Image
-                        src={"/course-author.png"}
-                        width={2070}
-                        height={1380}
-                        alt="course author"
-                        className="aspect-square rounded-full object-cover"
-                      />
-                    </div>
-
-                    <div
-                      aria-describedby="right-column"
-                      className="flex-1 flex flex-col gap-1 items-start"
-                    >
-                      <p
-                        aria-describedby="name"
-                        className="text-xl font-medium text-white"
-                      >
-                        Raidah F. Gauri
-                      </p>
-                      <span
-                        aria-describedby="profession"
-                        className="text-sm font-normal text-white"
-                      >
-                        Quran Instructor
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CourseDetailsHero />
             </div>
           </div>
         </section>
@@ -273,35 +265,16 @@ const CourseDetails = () => {
             <div aria-describedby="main-wrapper">
               <div
                 aria-describedby="highlight-box-wrapper"
-                className="max-w-max flex items-center gap-3 -mt-24 mb-20"
+                className="max-w-max flex items-center flex-wrap gap-3 -mt-26 mb-16"
               >
-                <div
-                  aria-describedby="highlight-box"
-                  className="bg-white py-2.5 px-4 rounded-md border border-[#E2E2E2] flex items-center gap-3 min-w-48"
-                >
-                  <span className="flex items-center shrink-0 grow-0 basis-auto">
-                    <Star className="w-4.5 h-4.5 text-neutral-800" />
-                  </span>
-
-                  <div
-                    aria-describedby="right-column"
-                    className="flex items-start gap-1 flex-col"
-                  >
-                    <p className="text-sm font-normal text-neutral-700">
-                      Last update
-                    </p>
-                    <span className="text-sm font-bold text-neutral-900">
-                      8/2024
-                    </span>
-                  </div>
-                </div>
+                <CourseHighlightBox data={COURSE_HIGHLIGHT_DATA}/>
               </div>
 
               <div
                 aria-describedby="curriculum-wrapper"
-                className="flex items-start gap-8 w-full"
+                className="flex items-start gap-8 w-full flex-col-reverse lg:flex-row"
               >
-                <div aria-describedby="left-column" className="flex-1">
+                <div aria-describedby="left-column" className="flex-1 w-full">
                   <div
                     aria-describedby="course-features-box-wrapper"
                     className="space-y-8"
@@ -311,16 +284,23 @@ const CourseDetails = () => {
                     <CourseContentBox data={COURSE_CONTENT_DATA} />
                   </div>
                 </div>
+
                 <div
                   aria-describedby="right-column"
-                  className="shrink-0 grow-0 basis-auto w-105"
+                  className="shrink-0 grow-0 basis-auto sm:w-105 max-w-full w-full sm:max-w-none lg:sticky top-3 right-0 z-[2] max-h-screen overflow-y-auto overflow-x-hidden"
                 >
-                  right column
+                  <div aria-describedby="column-wrapper" className="space-y-8">
+                    <CoursePriceCard />
+                    <CourseIncludesBox data={COURSE_INCLUDES} />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <GetTrialClass />
+        <FaqSection />
       </div>
     </React.Fragment>
   );

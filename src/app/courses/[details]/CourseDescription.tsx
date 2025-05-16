@@ -14,17 +14,17 @@ const CourseDescription: React.FC<CourseDescriptionProps> = ({ data }) => {
     <React.Fragment>
       <div
         aria-describedby="course-feature-box"
-        className="p-8 bg-white rounded-2xl border border-[#ECECEC]"
+        className="p-6 sm:p-8 bg-white rounded-2xl border border-[#ECECEC]"
       >
-        <h3 className="text-2xl font-medium text-neutral-900 pb-4 border-b border-neutral-200 mb-6">
+        <h3 className="text-xl sm:text-2xl font-medium text-neutral-900 pb-4 border-b border-neutral-200 mb-6">
           {title}
         </h3>
 
-        <div aria-describedby="course-description" className="mb-10">
-          <p className="text-lg font-normal text-neutral-800">{content}</p>
+        <div aria-describedby="course-description" className="mb-6 sm:mb-10">
+          <p className="text-base sm:text-lg font-normal text-neutral-800">{content}</p>
         </div>
 
-        <Button variant={"outline"}>See More</Button>
+        <Button variant={"outline"} className="text-base sm:text-xl">See More</Button>
       </div>
     </React.Fragment>
   );

@@ -6,7 +6,7 @@ interface CourseFeatureBoxProps {
   data: CourseFeaturesTypes[];
 }
 
-const CourseFeatureBox: React.FC<CourseFeatureBoxProps> = ({ data }) => {
+const CourseIncludesBox: React.FC<CourseFeatureBoxProps> = ({ data }) => {
   return (
     <React.Fragment>
       {data.map((featItem) => (
@@ -21,7 +21,7 @@ const CourseFeatureBox: React.FC<CourseFeatureBoxProps> = ({ data }) => {
 
           <ul
             aria-describedby="course-feature-lists"
-            className="flex items-start flex-col gap-y-6 mb-10"
+            className="flex items-start flex-col gap-y-6 mb-7"
           >
             {featItem.features.map(({ icon: Icon, label }, index) => (
               <li
@@ -30,9 +30,9 @@ const CourseFeatureBox: React.FC<CourseFeatureBoxProps> = ({ data }) => {
                 className="flex items-center gap-2"
               >
                 <span className="flex shrink-0 grow-0 basis-auto">
-                  <Icon className="fill-indigo-500 text-white w-7 h-7" />
+                  <Icon className="w-4 h-4 text-black" />
                 </span>
-                <p className="text-base sm:text-lg font-normal text-neutral-800">{label}</p>
+                <p className="text-base sm:text-lg font-normal text-neutral-600">{label}</p>
               </li>
             ))}
           </ul>
@@ -44,4 +44,4 @@ const CourseFeatureBox: React.FC<CourseFeatureBoxProps> = ({ data }) => {
   );
 };
 
-export default CourseFeatureBox;
+export default CourseIncludesBox;
