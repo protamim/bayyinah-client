@@ -133,7 +133,7 @@ export const FooterNavigation = () => {
         },
         {
           label: "Testimonials",
-          url: "#",
+          url: "/testimonials",
         },
         {
           label: "FAQ",
