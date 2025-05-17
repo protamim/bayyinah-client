@@ -326,7 +326,7 @@ const Footer = () => {
               <ul className="flex items-center">
                 <li className="flex pr-2 last:pr-0 border-r border-r-neutral-400 last:border-r-0 last:pl-2">
                   <Link
-                    href={"#"}
+                    href={"/terms-of-services"}
                     className="text-xs sm:text-base font-medium text-neutral-600 transition-colors ease-in-out duration-300 hover:text-regal-blue-600"
                   >
                     Terms of Service
@@ -334,7 +334,7 @@ const Footer = () => {
                 </li>
                 <li className="flex pr-2 last:pr-0 border-r border-r-neutral-400 last:border-r-0 last:pl-2">
                   <Link
-                    href={"#"}
+                    href={"/privacy-policy"}
                     className="text-xs sm:text-base font-medium text-neutral-600 transition-colors ease-in-out duration-300 hover:text-regal-blue-600"
                   >
                     Privacy Policy
