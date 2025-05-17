@@ -30,9 +30,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
 
               {description && (
                 <p className="text-base sm:text-xl font-normal text-white text-center">
-                  We help you learn the Quran, understand Arabic, and live
-                  Islamic teachings through easy, fun lessons that strengthen
-                  your faith and bring you closer to Allah.
+                  {description}
                 </p>
               )}
             </div>
