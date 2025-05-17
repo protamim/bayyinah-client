@@ -129,7 +129,7 @@ export const FooterNavigation = () => {
         },
         {
           label: "Our Teachers",
-          url: "#",
+          url: "/our-teachers",
         },
         {
           label: "Testimonials",
