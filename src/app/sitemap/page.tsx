@@ -1,10 +1,8 @@
-"use client";
-
 import PageHeroSection from "@/components/common/PageHeroSection";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
+import PageTree from "./PageTree";
 
 const SitemapPage = () => {
   return (
@@ -22,38 +20,7 @@ const SitemapPage = () => {
                 aria-describedby="sitemap-tree-wrapper"
                 className="overflow-x-auto"
               >
-                <Tree
-                  label={<Pill variant="title">Page&nbsp;List</Pill>}
-                  lineColor="#ccc"
-                  lineWidth="2px"
-                  lineBorderRadius="0"
-                >
-                  <TreeNode label={<Pill>Home</Pill>} />
-                  <TreeNode label={<Pill>About</Pill>} />
-
-                  <TreeNode label={<Pill>Course</Pill>}>
-                    <TreeNode label={<Pill variant="child">Tajweed</Pill>} />
-                    <TreeNode label={<Pill variant="child">Quran</Pill>} />
-                    <TreeNode label={<Pill variant="child">Quran</Pill>} />
-                  </TreeNode>
-
-                  <TreeNode label={<Pill>Resources</Pill>}>
-                    {[
-                      "Testimonial",
-                      "Blog",
-                      "Teacher",
-                      "Contact Us",
-                      "FAQ",
-                    ].map((t) => (
-                      <TreeNode
-                        key={t}
-                        label={<Pill variant="child">{t}</Pill>}
-                      />
-                    ))}
-                  </TreeNode>
-
-                  <TreeNode label={<Pill>Career</Pill>} />
-                </Tree>
+                <PageTree />
               </div>
             </div>
           </div>
@@ -75,9 +42,9 @@ const SitemapPage = () => {
                 aria-describedby="content-wrapper"
                 className="flex items-center justify-center flex-col gap-y-5 mx-auto relative z-[5]"
               >
-                 <h6 className="py-2.5 px-5 rounded-full bg-[#155699] border border-[#1E63AA] text-center text-base font-medium text-white max-w-max">
-                    Lets Learn with us!
-                  </h6>
+                <h6 className="py-2.5 px-5 rounded-full bg-[#155699] border border-[#1E63AA] text-center text-base font-medium text-white max-w-max">
+                  Lets Learn with us!
+                </h6>
 
                 <h3 className="text-3xl sm:text-5xl font-bold text-white text-center leading-snug">
                   The path to success begins with Islamic knowledge, a key to
@@ -97,18 +64,3 @@ const SitemapPage = () => {
 };
 
 export default SitemapPage;
-
-/* simple re-usable pill */
-const Pill = ({ children, variant = "parent" }) => (
-  <div
-    className={
-      variant === "title"
-        ? "bg-regal-blue-500 py-2.5 px-11 rounded-md text-white max-w-max mx-auto"
-        : variant === "child"
-        ? "bg-[#4ab1ff] text-white"
-        : "bg-[#f5a623]" + " inline-block px-6 py-1.5 font-semibold rounded-md"
-    }
-  >
-    {children}
-  </div>
-);

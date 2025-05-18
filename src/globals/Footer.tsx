@@ -145,7 +145,7 @@ export const FooterNavigation = () => {
         },
         {
           label: "Sitemap",
-          url: "#",
+          url: "/sitemap",
         },
       ],
     },
