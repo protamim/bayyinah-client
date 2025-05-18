@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import {
   Carousel,
@@ -9,8 +11,15 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { IconQuote } from "./svgIcons";
+import Autoplay from "embla-carousel-autoplay";
+
 
 const FeedbackFromStudents = () => {
+   const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
+
   return (
     <React.Fragment>
       <section
@@ -70,7 +79,8 @@ const FeedbackFromStudents = () => {
               >
                 <Carousel
                   className="w-full lg:w-[480px] shadow-lg rounded-2xl"
-                  opts={{ align: "center", dragFree: true }}
+                  plugins={[plugin.current]}
+                  opts={{ align: "center", dragFree: true, loop: true }}
                 >
                   <CarouselContent>
                     {Array.from({ length: 10 }).map((_, index) => (
