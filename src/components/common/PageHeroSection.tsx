@@ -24,7 +24,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
               aria-describedby="content-wrapper"
               className="mx-auto max-w-4xl flex flex-col gap-y-8 items-center justify-center"
             >
-              <h1 className="text-4xl sm:text-6xl font-bold text-center text-white">
+              <h1 className="text-4xl leading-snug sm:leading-snug sm:text-6xl font-bold text-center text-white">
                 {title}
               </h1>
 
